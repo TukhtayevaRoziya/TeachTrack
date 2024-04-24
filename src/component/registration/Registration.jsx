@@ -1,16 +1,10 @@
 import React from 'react'
 import {
     Button,
-    Cascader,
-    DatePicker,
     Form,
     Input,
     InputNumber,
-    Mentions,
-    Select,
-    TreeSelect,
 } from 'antd';
-import img from '../../assets/regis/resgis.png'
 
 import style from './Registration.module.css'
 

@@ -49,6 +49,9 @@ function App() {
         <Route path="Fiz-mat" element={<Wester path="Fiz-mat" course={'Fiz-Mat Education Center'} subject={'Fizika'} logo={fiz_mat} time={'13:00-15:00'}/>} /> 
         <Route path="InStudy" element={<Wester path="InStudy" course={'InStudy Education Center'} subject={'Matematika'} logo={fiz_mat} time={'14:00-16:00'}/>} /> 
         <Route path="/Wester/registration" element={<Registration/>} /> 
+        <Route path="/Result/registration" element={<Registration/>} /> 
+        <Route path="/Fiz-mat/registration" element={<Registration/>} /> 
+        <Route path="/InStudy/registration" element={<Registration/>} /> 
       </Routes>
       <Footer/>
     </div>
