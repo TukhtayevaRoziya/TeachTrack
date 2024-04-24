@@ -1,4 +1,4 @@
-import { Route, Routes, useParams } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import MyHeader from "./component/header/Header";
 import MyTable from "./component/table/Table";
@@ -15,7 +15,7 @@ import Registration from "./component/registration/Registration";
 function App() {
   const items = new Array(3).fill(null).map((_, index) => ({
     key: String(index + 1),
-    label: `${index == 0 ? 'Asosiy' : index == 1 ? 'Biz haqimizda' : "Bog'lanish"}`,
+    label: `${index === 0 ? 'Asosiy' : index === 1 ? 'Biz haqimizda' : "Bog'lanish"}`,
   }));
   return (
     <div className="App">

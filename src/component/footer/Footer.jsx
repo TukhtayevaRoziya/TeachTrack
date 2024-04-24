@@ -2,7 +2,6 @@ import React from "react";
 import style from "./Footer.module.css";
 import { FacebookOutlined, InstagramOutlined, LinkedinOutlined} from '@ant-design/icons';
 
-// import { FaInstagram, FaLinkedin, FaGoogle } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -15,27 +14,18 @@ const Footer = () => {
         </p>
         <ul className={style.socials}>
           <li>
-            <a href="#">
+            <a href="/">
               <FacebookOutlined size={30} color="#DB4437" />
             </a>
           </li>
-          {/* <li>
-            <a href="#">
-              <FaInstagram size={30} color="#C13584" />
-            </a>
-          </li>
+       
           <li>
-            <a href="#">
-              <FaInstagram size={30} color="#C13584" />
-            </a>
-          </li> */}
-          <li>
-            <a href="#">
+            <a href="/">
               <InstagramOutlined size={30} color="#C13584" />
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="/">
 
               <LinkedinOutlined size={30} color="#0077B5" />
             </a>

@@ -1,17 +1,13 @@
 import React, { useRef, useState } from 'react';
-import { Button, Input, Space, Table, TimePicker } from 'antd';
-import dayjs from 'dayjs';
+import { Button, Input, Space, Table } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
-import { NavLink } from 'react-router-dom';
-// import {Redire}
-// import Highlighter from 'react-highlight-words';
+
 import { redirect } from "react-router-dom";
 
 
 const MyTable = () => {
     const format = 'HH:mm';
 
-    const [searchText, setSearchText] = useState('');
     const [searchedColumn, setSearchedColumn] = useState('');
     const searchInput = useRef();
 
@@ -21,27 +17,25 @@ const MyTable = () => {
         dataIndex,
     ) => {
         confirm();
-        setSearchText(selectedKeys[0]);
         setSearchedColumn(dataIndex);
     };
 
     const handleReset = (clearFilters) => {
         clearFilters();
-        setSearchText('');
     };
 
     const getColumnSearchProps = (dataIndex) => ({
         filterDropdown: ({ setSelectedKeys, selectedKeys, confirm, clearFilters, close }) => (
             <div style={{ padding: 8 }} onKeyDown={(e) => e.stopPropagation()}>
-                 <Input
-          ref={searchInput}
-          placeholder={`Search ${dataIndex}`}
-          value={selectedKeys[0]}
-          onChange={(e) => setSelectedKeys(e.target.value ? [e.target.value] : [])}
-          onPressEnter={() => handleSearch(selectedKeys , confirm, dataIndex)}
-          style={{ marginBottom: 8, display: 'block' }}
-        />
-       
+                <Input
+                    ref={searchInput}
+                    placeholder={`Search ${dataIndex}`}
+                    value={selectedKeys[0]}
+                    onChange={(e) => setSelectedKeys(e.target.value ? [e.target.value] : [])}
+                    onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
+                    style={{ marginBottom: 8, display: 'block' }}
+                />
+
                 <Space>
                     <Button
                         type="primary"
@@ -64,7 +58,6 @@ const MyTable = () => {
                         size="small"
                         onClick={() => {
                             confirm({ closeDropdown: false });
-                            setSearchText((selectedKeys)[0]);
                             setSearchedColumn(dataIndex);
                         }}
                     >
@@ -92,19 +85,18 @@ const MyTable = () => {
                 .includes((value).toLowerCase()),
         onFilterDropdownOpenChange: (visible) => {
             if (visible) {
-                // setTimeout(() => searchInput.current?.select(), 100);
             }
         },
 
         render: (text) =>
             searchedColumn === dataIndex ? (
-                
-             <div>  {text ? text.toString() : ''}</div>
+
+                <div>  {text ? text.toString() : ''}</div>
             ) : (
                 text
             )
-            
-        
+
+
     });
 
     const columns = [
@@ -133,10 +125,6 @@ const MyTable = () => {
             onFilter: (value, record) => record.name.includes(value),
             width: '20%',
             render: text => <a href={"#/" + text}>{text}</a>
-
-            // render:(text) =>{
-            //     <NavLink to={'/sad'}>{text}</NavLink>
-            //                 }
         },
         {
             title: 'Narxi',
@@ -146,7 +134,6 @@ const MyTable = () => {
         {
             title: 'Vaqt',
             dataIndex: 'time',
-            // sorter: (a, b) => a.price - b.price,
             ...getColumnSearchProps('time')
         },
         {
@@ -174,7 +161,7 @@ const MyTable = () => {
             price: 350000,
             time: '12:00',
             subject: 'Fizika',
-            link:'/result'
+            link: '/result'
         },
         {
             id: 2,
@@ -183,7 +170,7 @@ const MyTable = () => {
             time: '13:00',
 
             subject: 'Fizika',
-            link:'/fiz_mat'
+            link: '/fiz_mat'
 
         },
         {
@@ -193,7 +180,7 @@ const MyTable = () => {
             time: '13:00',
 
             subject: 'Matematika',
-            link:'/wester'
+            link: '/wester'
 
         },
         {
@@ -203,7 +190,7 @@ const MyTable = () => {
             time: '14:00',
 
             subject: 'Matematika',
-            link:'/instudy'
+            link: '/instudy'
 
         },
     ];
@@ -212,20 +199,21 @@ const MyTable = () => {
     };
     return (
         <>
-        <h1 style={{textAlign:'center'}}>
-            O'quv kurslar
-        </h1>
+            <h1 style={{ textAlign: 'center' }}>
+                O'quv kurslar
+            </h1>
             <Table columns={columns} dataSource={data} onChange={onChange}
-             onRow={(record) => {
-                return {
-                  onClick: () => {
-                    redirect("/login");
-                  },
-                //   ()
-                };}}
-       
+                onRow={(record) => {
+                    return {
+                        onClick: () => {
+                            redirect("/login");
+                        },
+                        //   ()
+                    };
+                }}
+
             />
-      
+
         </>
     )
 }
