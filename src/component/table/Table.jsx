@@ -6,13 +6,11 @@ import { redirect } from "react-router-dom";
 
 
 const MyTable = () => {
-    const format = 'HH:mm';
 
     const [searchedColumn, setSearchedColumn] = useState('');
     const searchInput = useRef();
 
     const handleSearch = (
-        selectedKeys,
         confirm,
         dataIndex,
     ) => {
