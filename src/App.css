@@ -1,0 +1,13 @@
+.ant-menu-overflow {
+  justify-content: flex-end;
+}
+.teachTrack_logo{
+  color: white;
+  font-size: 20px;
+}
+:where(.css-dev-only-do-not-override-yp8pcc).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-selected, :where(.css-dev-only-do-not-override-yp8pcc).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-item-selected, :where(.css-dev-only-do-not-override-yp8pcc).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-selected, :where(.css-dev-only-do-not-override-yp8pcc).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected{
+  background-color: transparent;
+}
+.ant-input-number{
+  width: 100%;
+}

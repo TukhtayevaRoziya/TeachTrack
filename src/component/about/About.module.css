@@ -1,0 +1,27 @@
+.body{
+    display: flex;
+    padding: 2rem;
+    justify-content: space-between;
+}
+.title{
+    color: #333333;
+    text-align: center;
+}
+.block{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.block h1{
+color: #333333;
+font-size: 18px;
+text-align: center;
+}
+.block p{
+    color: rgba(51, 51, 51, 0.5);
+    text-align: center;
+    line-height: 26.2px;
+}
+.block img{
+    margin: 0 auto;
+}

@@ -1,0 +1,20 @@
+.body{
+    /* display: flex; */
+    background-color: rgba(243, 243, 243, 1);
+}
+
+.title{
+    text-align: center ;
+    /* background-color: rgba(243, 243, 243, 1); */
+margin: 0;
+padding-top: 2rem;
+}
+.block {
+    text-align: center;
+}
+.block form{
+    margin: 2rem  calc(30% + 1rem) 0 auto;
+}
+.block form input{
+    width: 100%;
+}

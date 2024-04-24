@@ -1,0 +1,33 @@
+.body{
+    box-shadow:rgba(205, 28, 104, 0.08);
+
+}
+.title{
+    font-size: 20px;
+    color: white;
+}
+
+.header_block{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_2{
+    background-image: url(../../assets/header.png);
+    background-size: 100% contain;
+}
+.header_text_wrap{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 50px;
+}
+.header_text_wrap h1{
+    font-size: 50px;
+    margin: 0 ;
+}
+.header_text_wrap p{
+    font-size: 20px;
+    color: #33333380;
+    width: 500px;
+}
