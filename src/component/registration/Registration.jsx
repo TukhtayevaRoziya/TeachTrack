@@ -12,6 +12,7 @@ const Registration = () => {
 
     const onFinish = (values) => {
         console.log('Success:', values);
+        alert('Kursga yozilganingiz uchun rahmat! Tez orada siz bilan bog\'lanamiz')
       };
       const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);

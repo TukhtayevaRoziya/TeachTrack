@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import MyHeader from "./component/header/Header";
 import MyTable from "./component/table/Table";
@@ -29,7 +29,7 @@ function App() {
           alignItems: 'center',
         }}
       >
-        <div className={"demo-logo teachTrack_logo"} >TeachTrack</div>
+        <Link to={'/'} className={"demo-logo teachTrack_logo"} >TeachTrack</Link>
         <Menu
           theme="dark"
           mode="horizontal"
